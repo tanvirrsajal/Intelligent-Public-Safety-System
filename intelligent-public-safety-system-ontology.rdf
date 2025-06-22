@@ -1,0 +1,1942 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/"
+     xml:base="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:intelligent-public-safety-system-ontology="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isDetectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isDetectedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isLocatedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isNotifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isNotifiedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasSeverity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasSeverity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasTraffic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasTraffic">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Alert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Alert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Authority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Authority">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Crime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Crime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EmergencyResponder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EmergencyResponder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EnvironmentalSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EnvironmentalSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Inform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Inform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Microphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Microphone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#NaturalDisaster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#NaturalDisaster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Resident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Resident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isDetectedBy rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#TrafficCamera1"/>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection1"/>
+        <intelligent-public-safety-system-ontology:hasSeverity>High</intelligent-public-safety-system-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isDetectedBy rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#TrafficCamera2"/>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection2"/>
+        <intelligent-public-safety-system-ontology:hasSeverity>Low</intelligent-public-safety-system-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Ambulance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Ambulance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EmergencyResponder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Authority1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Authority1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Authority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#BuildingResidents -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#BuildingResidents">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Resident"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#BuildingResidents2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#BuildingResidents2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Resident"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_A"/>
+        <intelligent-public-safety-system-ontology:hasDetected>Yes</intelligent-public-safety-system-ontology:hasDetected>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Crime1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Crime1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isDetectedBy rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera1"/>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_A"/>
+        <intelligent-public-safety-system-ontology:hasSeverity>High</intelligent-public-safety-system-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Drivers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Drivers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Resident"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Earthquake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Earthquake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#NaturalDisaster"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isDetectedBy rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Seismometer"/>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_B"/>
+        <intelligent-public-safety-system-ontology:hasSeverity>High</intelligent-public-safety-system-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <intelligent-public-safety-system-ontology:hasStatus>Pending</intelligent-public-safety-system-ontology:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isDetectedBy rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireSensor1"/>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building1"/>
+        <intelligent-public-safety-system-ontology:hasSeverity>High</intelligent-public-safety-system-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isDetectedBy rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireSensor2"/>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building2"/>
+        <intelligent-public-safety-system-ontology:hasSeverity>Low</intelligent-public-safety-system-ontology:hasSeverity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Alert"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <intelligent-public-safety-system-ontology:hasStatus>Pending</intelligent-public-safety-system-ontology:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Alert"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <intelligent-public-safety-system-ontology:hasStatus>Pending</intelligent-public-safety-system-ontology:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireFighterTeam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireFighterTeam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EmergencyResponder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireSensor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireSensor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building1"/>
+        <intelligent-public-safety-system-ontology:hasDetected>Yes</intelligent-public-safety-system-ontology:hasDetected>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireSensor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireSensor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building2"/>
+        <intelligent-public-safety-system-ontology:hasDetected>Yes</intelligent-public-safety-system-ontology:hasDetected>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <intelligent-public-safety-system-ontology:hasStatus>Pending</intelligent-public-safety-system-ontology:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Mic1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Mic1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Microphone"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Mic2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Mic2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Microphone"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Police1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Police1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EmergencyResponder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment"/>
+        <intelligent-public-safety-system-ontology:hasStatus>Pending</intelligent-public-safety-system-ontology:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment"/>
+        <intelligent-public-safety-system-ontology:hasStatus>Pending</intelligent-public-safety-system-ontology:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Seismometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Seismometer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EnvironmentalSensor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood_B"/>
+        <intelligent-public-safety-system-ontology:hasDetected>Yes</intelligent-public-safety-system-ontology:hasDetected>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#TrafficCamera1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#TrafficCamera1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection1"/>
+        <intelligent-public-safety-system-ontology:hasDetected>Yes</intelligent-public-safety-system-ontology:hasDetected>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#TrafficCamera2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#TrafficCamera2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <intelligent-public-safety-system-ontology:isLocatedAt rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection2"/>
+        <intelligent-public-safety-system-ontology:hasDetected>Yes</intelligent-public-safety-system-ontology:hasDetected>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Crime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#NaturalDisaster"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Actor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Response"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Alert"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Authority"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EmergencyResponder"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Resident"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Building"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Intersection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Neighborhood"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Camera"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#EnvironmentalSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Microphone"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/loc">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/nd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Accident with High Traffic triggers RouteAdjutment_Accident1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasSeverity"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                                <swrl:argument2>High</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                                <swrl:argument2>Yes</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Accident with Low Traffic triggers RouteAdjutment_Accident2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Accident"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasSeverity"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                                <swrl:argument2>Low</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                                <swrl:argument2>Yes</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Triggers InformPolice if there a crime</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Crime"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                        <swrl:argument2>Yes</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Event Location</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Event"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isDetectedBy"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/e"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isLocatedAt"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/loc"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isLocatedAt"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/loc"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>if the severity is high it goes for the Alert type: FireAlert</rdfs:comment>
+        <rdfs:label>High-Severity Fire triggers Fire Alert</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasSeverity"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                                <swrl:argument2>High</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                                <swrl:argument2>Yes</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>it triggers the Alert type: FireAlretLow if the severity is low</rdfs:comment>
+        <rdfs:label>Low-Severity Fire triggerts FireAlertLow</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Fire"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasSeverity"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                                <swrl:argument2>Low</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                                <swrl:argument2>Yes</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Evacutation is triggered if there is an earthquake</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#NaturalDisaster"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/nd"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Sensor"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasDetected"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/s"/>
+                                        <swrl:argument2>Yes</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/nd"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/nd"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Evacuation notifies the residents of the building</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/nd"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake"/>
+                                        <swrl:argument2>Pending</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Evacuation_Eartquake"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#BuildingResidents2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Incase of high fire this notifiesboth the fire fighter team and the residents in the building</rdfs:comment>
+        <rdfs:label>Notifes FireFighterTeam and the building Residents</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert"/>
+                                        <swrl:argument2>Pending</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#BuildingResidents"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlert"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireFighterTeam"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>if the alert FireAlertLow is triggered it only notifies the fire fighter team not the building residents</rdfs:comment>
+        <rdfs:label>Notifies FireFighterTeam incase of FireAlertLow</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow"/>
+                                        <swrl:argument2>Pending</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireAlertLow"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#FireFighterTeam"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>InformPolice notifies the police</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice"/>
+                                        <swrl:argument2>Pending</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#InformPolice"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Police1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>In case of accident with high traffic it notifies both the ambulance and the drivers</rdfs:comment>
+        <rdfs:label>Notifes Ambulance and the Drivers</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1"/>
+                                        <swrl:argument2>Pending</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Ambulance"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Drivers"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Incase of low traffic it only notifies the ambulance not the drivers for route adjustment</rdfs:comment>
+        <rdfs:label>Notifes Ambulance</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#triggers"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#isTrigeredBy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology/a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#hasStatus"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2"/>
+                                        <swrl:argument2>Pending</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#notifies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#RouteAdjustment_Accident2"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mehdi-khorasani/ontologies/2024/11/intelligent-public-safety-system-ontology#Ambulance"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
